@@ -217,6 +217,32 @@ figcaption {
   text-align: center;
 }
 
+
+/* ======== SECTION TEXTE D'ACCUEIL ======== */
+.welcome-section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 25px;
+  background: #f9f9f9;
+  border-left: 5px solid #A50044;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.welcome-title {
+  text-align: center;
+  font-size: 2em;
+  color: #004C97;
+  margin-bottom: 15px;
+}
+
+.welcome-text {
+  font-size: 1.1em;
+  line-height: 1.7;
+  margin-bottom: 15px;
+  color: #333;
+}
+
 /* ========================== FOOTER ========================== */
 footer {
   text-align: center;
