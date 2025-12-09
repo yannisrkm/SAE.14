@@ -141,15 +141,23 @@ header h1 {
   margin: 0;
 }
 
+
+/* Cherche ça dans ton CSS */
+.main-nav li:hover {
+  transform: translateY(-3px);
+  /* ombre portée rouge/rosée */
+  box-shadow: 0 4px 15px rgba(165, 0, 68, 0.4);
+  /* On s'assure que la bordure change aussi */
+  border-color: #FFD700; /* Le jaune or au survol */
+}
+
+/* une transition sur tout */
 .main-nav li {
   border: 2px solid #A50044;
   border-radius: 10px;
   overflow: hidden;
-  transition: transform 0.3s ease;
-}
-
-.main-nav li:hover {
-  transform: translateY(-3px);
+  /* MODIFIE LA TRANSITION ICI pour inclure le box-shadow et le border */
+  transition: all 0.3s ease;
 }
 
 .main-nav a {
