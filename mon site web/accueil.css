@@ -210,11 +210,14 @@ header h1 {
   max-width: 900px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s ease;
 }
 
 
+
 .hero img:hover {
-  transform: scale(1.02);
+  transform: scale(1.03);
+  box-shadow: 0 20px 30px rgba(0, 76, 151, 0.3);
 }
 
 figcaption {
