@@ -25,3 +25,74 @@
   color: #FFD700;
   margin-top: 10px;
 }
+
+/* Section Billetterie */
+.section-title {
+  text-align: center;
+  color: #004C97;
+  font-size: 2.5em;
+  margin: 50px 0 30px;
+}
+
+.tickets-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 0 20px 50px;
+  flex-wrap: wrap;
+}
+
+.ticket-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  width: 300px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s;
+}
+
+.ticket-card:hover {
+  transform: translateY(-10px);
+}
+
+.ticket-card.featured {
+  border: 3px solid #FFD700;
+  transform: scale(1.05);
+}
+
+.card-header {
+  padding: 30px 20px;
+  text-align: center;
+  color: white;
+}
+
+.card-header.basic { background: #004C97; }
+.card-header.premium { background: linear-gradient(45deg, #A50044, #004C97); }
+.card-header.match { background: #333; }
+
+.card-header h3 { margin: 0; font-size: 1.5em; }
+.price { display: block; font-size: 2.5em; font-weight: bold; margin-top: 10px; }
+
+.card-body { padding: 20px; text-align: center; }
+.card-body ul { list-style: none; padding: 0; text-align: left; margin-bottom: 25px; }
+.card-body li { margin-bottom: 12px; font-size: 1.1em; color: #555; }
+.card-body i { color: #A50044; width: 25px; }
+
+.btn-ticket {
+  background-color: #A50044;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 25px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-ticket:hover { background-color: #004C97; }
+.tag {
+  position: absolute; top: 0; right: 0;
+  background: #FFD700; color: #004C97;
+  padding: 5px 15px; font-weight: bold; font-size: 0.8em;
+}
