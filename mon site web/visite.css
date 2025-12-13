@@ -172,3 +172,47 @@
   from { opacity: 0; }
   to { opacity: 1; }
 }
+
+/* ==================== MARKETING PITCH (Style "Histoire") ==================== */
+.marketing-pitch {
+  max-width: 900px;           /* Largeur max pour que ce soit lisible */
+  margin: 0 auto 50px auto;   /* Centré horizontalement + marge en bas */
+  
+  /* Le style "Carte" comme dans Histoire */
+  background: #f9f9f9;
+  border-left: 6px solid #004C97; /* Bordure BLEUE au repos */
+  border-radius: 10px;
+  padding: 40px;
+  
+  /* Ombre douce */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  
+  /* Animation fluide pour tout changement */
+  transition: all 0.4s ease;
+  position: relative; /* Pour ajuster le contenu si besoin */
+}
+
+/* L'animation au survol (La touche Barça) */
+.marketing-pitch:hover {
+  transform: translateY(-5px);    /* Le bloc remonte légèrement */
+  border-left-color: #A50044;     /* La bordure devient ROUGE */
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15); /* L'ombre grandit */
+}
+
+/* Le style du texte à l'intérieur */
+.marketing-pitch p {
+  font-size: 1.2em;
+  line-height: 1.8;
+  color: #333;
+  text-align: center; /* Texte centré pour l'élégance */
+  margin: 0;
+}
+
+/* Mise en valeur de la phrase de fin en gras */
+.marketing-pitch strong {
+  color: #A50044;     /* On met la phrase clé en rouge */
+  font-weight: bold;
+  display: block;     /* On la met sur sa propre ligne */
+  margin-top: 15px;
+  font-size: 1.1em;
+}
