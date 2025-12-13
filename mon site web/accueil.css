@@ -186,21 +186,34 @@ header h1 {
 }
 
 .quote {
-  font-family: 'Momo Signature', cursive;
-  font-size: 3em;
-  color: #A50044;
-  font-style: italic;
+  font-family: 'Momo Signature', cursive; /* Garde ta police si elle marche */
+  font-size: 3.5em;
+  font-weight: bold;
+  background: linear-gradient(to right, #A50044, #FFD700);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
   text-align: center;
   margin-bottom: 5px;
+  animation: popIn 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+  opacity: 0; 
 }
 
 .quote-translate {
-  font-family: 'Momo Signature', cursive;
-  font-size: 1.8em;
-  color: #004C97;
-  font-style: italic;
-  text-align: center;
-  margin-bottom: 20px;
+  /* ... garde tes styles ... */
+  animation: fadeIn 2s ease forwards;
+  animation-delay: 1s; /* Apparaît après la citation principale */
+  opacity: 0;
+}
+
+/* Les Keyframes à ajouter à la fin du fichier */
+@keyframes popIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
 }
 
 .hero img {
