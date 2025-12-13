@@ -1,6 +1,7 @@
-/* Hero spécifique à la page visite */
+/* ==================== HERO SECTION (Entrez dans la légende) ==================== */
 .visit-hero {
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://tickets.fcbarcelona.com/fcb-museum/images/en/headers/basic-tour-header.jpg');
+  /* On met un dégradé aux couleurs du club par-dessus l'image pour l'ambiance */
+  background: linear-gradient(to bottom, rgba(0, 76, 151, 0.8), rgba(165, 0, 68, 0.6)), url('https://tickets.fcbarcelona.com/fcb-museum/images/en/headers/basic-tour-header.jpg');
   background-size: cover;
   background-position: center;
   height: 60vh;
@@ -10,20 +11,25 @@
   align-items: center;
   color: white;
   text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
+/* Animation d'entrée pour le titre */
 .visit-hero h1 {
   font-size: 4em;
   margin: 0;
   text-transform: uppercase;
   letter-spacing: 5px;
-  text-shadow: 2px 2px 10px black;
+  text-shadow: 2px 2px 0px #A50044; /* Ombre rouge */
+  animation: slideDown 1s ease-out;
 }
 
 .visit-hero p {
   font-size: 1.5em;
-  color: #FFD700;
-  margin-top: 10px;
+  color: #FFD700; /* Or */
+  margin-top: 15px;
+  font-weight: bold;
+  animation: fadeIn 1.5s ease-out;
 }
 
 /* Section Billetterie */
@@ -95,4 +101,74 @@
   position: absolute; top: 0; right: 0;
   background: #FFD700; color: #004C97;
   padding: 5px 15px; font-weight: bold; font-size: 0.8em;
+}
+
+/* Section Alentours */
+.intro-text { text-align: center; font-size: 1.2em; color: #666; margin-bottom: 30px; }
+
+/* ==================== CARTES VILLES (Alentours) ==================== */
+.places-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding-bottom: 60px;
+}
+
+.place {
+  width: 300px;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-bottom: 4px solid transparent;
+}
+
+/* Animation au survol : la carte monte et la bordure devient or */
+.place:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 76, 151, 0.2); /* Ombre bleue légère */
+  border-bottom-color: #FFD700;
+}
+
+.img-container {
+  height: 200px;
+  overflow: hidden;
+}
+
+.place img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.place:hover img {
+  transform: scale(1.1); /* Zoom doux sur l'image */
+}
+
+.place h4 {
+  color: #004C97;
+  font-size: 1.4em;
+  margin: 15px 0 5px;
+  text-align: center;
+}
+
+.place p {
+  font-size: 0.95em;
+  color: #555;
+  text-align: center;
+  padding: 0 15px 20px;
+}
+
+/* Keyframes pour les animations du haut */
+@keyframes slideDown {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
