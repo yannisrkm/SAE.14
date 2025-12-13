@@ -232,6 +232,59 @@ header {
   border-bottom-color: #FFD700;
 }
 
+/* ==================== STYLE DES LÉGENDES ==================== */
+
+/* La grille pour aligner les cartes côte à côte */
+.legends-grid {
+  display: flex;
+  justify-content: center; /* Centre les cartes au milieu de la page */
+  gap: 30px;              
+  flex-wrap: wrap;        
+  padding: 20px;
+}
+
+/* La carte elle-même */
+.legend-card {
+  background: #f9f9f9;
+  border-radius: 15px;    
+  width: 300px;           /* Largeur fixe pour que tout soit aligné */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Petite ombre */
+  overflow: hidden;       /* Important : empêche l'image de dépasser des coins arrondis */
+  transition: transform 0.3s ease; /* Animation fluide au survol */
+  text-align: center;
+  border-bottom: 5px solid #A50044; 
+}
+
+/* L'effet au survol de la souris */
+.legend-card:hover {
+  transform: translateY(-10px); 
+  box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+}
+
+/* === LES IMAGES === */
+.legend-card img {
+  width: 100%;           
+  height: 220px;         
+  object-fit: cover;      
+  display: block;         
+}
+
+/* Le texte dans la carte */
+.legend-card h4 {
+  color: #004C97;
+  margin: 15px 0 5px 0;
+  font-size: 1.3em;
+}
+
+.legend-card p {
+  padding: 0 15px 20px 15px;
+  font-size: 0.95em;
+  color: #555;
+}
+
+.legend-card:nth-child(2) img {
+  object-position: center top;
+}
 /* ==================== FOOTER ==================== */
 footer {
   text-align: center;
