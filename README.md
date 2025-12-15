@@ -16,6 +16,8 @@ Le thème choisi est le **FC Barcelone**, un sujet passion passionnant permettan
 - Les informations touristiques et la billetterie.
 - Une présentation personnelle de l'auteur.
 
+  Lien du Trello en cas de problème de partage : https://trello.com/invite/b/6914a3c1d3c90dd1ef533a1d/ATTI6879ee1285d2fdac4b23612f56c15acf09F57FE0/sae14-yannisrkm
+
 ### Objectifs Pédagogiques
 - Maîtrise du **HTML** sémantique.
 - Maîtrise du **CSS** (Flexbox, Animations, Responsive Design).
