@@ -53,16 +53,16 @@ Ce site a été développé avec une approche "Mobile First" et respecte les sta
 
 ## 📂 Structure du Projet
 
-/ (Racine)
-├── index.html        # Page d'accueil (Renommée pour GitHub Pages)
-├── accueil.css       # Styles globaux et spécifiques à l'accueil
-├── histoire.html     # Timeline historique et Légendes du club
-├── histoire.css      # Styles spécifiques à la page histoire
-├── visite.html       # Offres de billetterie et Guide touristique
-├── visite.css        # Styles spécifiques à la page visite
-├── apropos.html      # Présentation de l'étudiant et du projet
-├── apropos.css       # Styles "manuscrits" pour la page à propos
-└── README.md         # Documentation du projet
+Racine:
+- index.html        # Page d'accueil (Renommée pour GitHub Pages)
+- accueil.css       # Styles globaux et spécifiques à l'accueil
+- histoire.html     # Timeline historique et Légendes du club
+- histoire.css      # Styles spécifiques à la page histoire
+- visite.html       # Offres de billetterie et Guide touristique
+- visite.css        # Styles spécifiques à la page visite
+- apropos.html      # Présentation de l'étudiant et du projet
+- apropos.css       # Styles "manuscrits" pour la page à propos
+- README.md         # Documentation du projet
 
 Yannis RUKIRAMARIGO - Étudiant en 1ère année de BUT R&T.
 
