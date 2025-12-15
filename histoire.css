@@ -80,7 +80,6 @@ header {
   background-color: #A50044;
 }
 
-/* RESEAUX SOCIAUX */
 .social-icons {
   position: absolute;
   right: 20px;
@@ -134,7 +133,7 @@ header {
   to { opacity: 0; visibility: hidden; }
 }
 
-/* ==================== SECTION HISTOIRE (CORRIGÉE) ==================== */
+/* ==================== SECTION HISTOIRE ==================== */
 .section-title {
   text-align: center;
   font-size: 2.5em;
@@ -154,19 +153,18 @@ header {
   padding: 20px;
 }
 
-/* C'est ici que j'ai stabilisé le cadrage */
+/* Correction du cadrage Timeline pour éviter les décalages */
 .event {
-  display: flex; /* On garde les éléments côte à côte sur PC */
-  align-items: center; /* Centré verticalement */
+  display: flex; 
+  align-items: center;
   justify-content: space-between;
-  gap: 40px; /* Plus d'espace entre texte et image */
+  gap: 40px; /* Espace propre entre texte et image */
   margin-bottom: 60px;
   background: #f9f9f9;
   border-left: 5px solid #004C97;
   border-radius: 10px;
-  padding: 30px; /* Un peu plus d'espace interne */
+  padding: 30px;
   transition: transform 0.3s ease;
-  /* J'ai retiré flex-wrap pour éviter que ça casse bizarrement sur PC */
 }
 
 .event:hover {
@@ -175,7 +173,7 @@ header {
 }
 
 .event-text {
-  flex: 1; /* Le texte prend toute la place disponible */
+  flex: 1; /* Le texte prend toute la place possible */
 }
 
 .event h3 {
@@ -191,9 +189,9 @@ header {
   margin: 0;
 }
 
-/* Gestion stricte de l'image pour qu'elle ne casse pas le layout */
+/* Image timeline stable */
 .event img {
-  width: 40%; /* L'image prend 40% de la largeur sur PC */
+  width: 40%; 
   max-width: 400px;
   height: auto;
   border-radius: 10px;
@@ -238,10 +236,12 @@ header {
   border-bottom-color: #FFD700;
 }
 
+/* === CORRECTION ICI POUR R10 === */
 .legend-card img {
   width: 100%;
   height: 220px;
   object-fit: cover;
+  object-position: top; /* <--- C'est ça qui sauve la tête de Ronnie ! */
   display: block;
 }
 
@@ -282,7 +282,7 @@ footer {
     margin: 10px auto;
   }
 
-  .logo { height: 100px; } /* Logo un peu plus petit sur mobile */
+  .logo { height: 100px; }
 
   .main-nav li {
     width: 80%;
@@ -290,31 +290,28 @@ footer {
     margin-bottom: 5px;
   }
 
-  /* --- CORRECTIF CADRAGE HISTOIRE MOBILE --- */
+  /* --- CORRECTIF RESPONSIVE HISTOIRE --- */
   .timeline {
     padding: 10px;
   }
 
+  /* Passage en colonne sur mobile */
   .event {
-    flex-direction: column; /* On empile verticalement */
-    text-align: center;     /* Texte centré */
-    border-left: none;      /* Plus de bordure à gauche */
-    border-top: 5px solid #004C97; /* Bordure en haut */
+    flex-direction: column; 
+    text-align: center;     
+    border-left: none;      
+    border-top: 5px solid #004C97; 
     padding: 20px;
     gap: 20px;
   }
 
   .event img {
-    width: 100%; /* L'image prend toute la largeur sur mobile */
+    width: 100%; 
     max-width: 100%;
     margin-top: 10px;
   }
-
-  .event-text {
-    width: 100%;
-  }
-
-  /* Cartes légendes sur mobile */
+  
+  /* Pour les légendes sur mobile */
   .legends-grid {
     flex-direction: column;
     align-items: center;
