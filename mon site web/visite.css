@@ -1,7 +1,9 @@
 /* ==================== HERO SECTION (Entrez dans la légende) ==================== */
 .visit-hero {
-  /* On met un dégradé aux couleurs du club par-dessus l'image pour l'ambiance */
-  background: linear-gradient(to bottom, rgba(0, 76, 151, 0.8), rgba(165, 0, 68, 0.6)), url('https://tickets.fcbarcelona.com/fcb-museum/images/en/headers/basic-tour-header.jpg');
+  /* J'ai changé le lien de l'image par une vue panoramique fiable depuis Wikimedia */
+  background: linear-gradient(rgba(0, 76, 151, 0.8), rgba(165, 0, 68, 0.6)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Camp_Nou_view.jpg/1280px-Camp_Nou_view.jpg');
+  
+  /* Le reste ne change pas */
   background-size: cover;
   background-position: center;
   height: 60vh;
@@ -215,4 +217,37 @@
   display: block;     /* On la met sur sa propre ligne */
   margin-top: 15px;
   font-size: 1.1em;
+}
+
+/* ================= RESPONSIVE GLOBAL ================= */
+@media screen and (max-width: 768px) {
+  
+  /* HEADER & NAV (Copié pour la cohérence) */
+  .header-content, .main-nav ul { flex-direction: column; }
+  .logo, .social-icons { position: static; transform: none; margin: 10px auto; }
+  .main-nav li { width: 80%; text-align: center; margin-bottom: 5px; }
+
+  /* GRILLES ET CARTES (Passe tout en colonne unique) */
+  .timeline, .legends-grid, .tickets-grid, .places-grid, .presentation-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  /* Ajustement des images et cartes */
+  .event, .legend-card, .ticket-card, .place, .personal-card {
+    width: 100% !important; /* Force la largeur à 100% de l'écran */
+    max-width: 400px;       /* Mais pas plus de 400px pour que ça reste joli */
+    margin-bottom: 30px;    /* Espace entre les éléments */
+  }
+  
+  .event {
+    flex-direction: column; /* Pour la timeline : image sous le texte */
+    border-left: none;      /* On change le style bordure */
+    border-top: 5px solid #004C97;
+  }
+  
+  .visit-hero h1, .about-hero h1 {
+    font-size: 2.5em; /* Titres plus petits */
+  }
 }

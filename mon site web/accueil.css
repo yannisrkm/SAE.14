@@ -275,3 +275,62 @@ footer {
   margin-top: 20px;
   font-family: 'Roboto Condensed', sans-serif;
 }
+
+/* ======================================================= */
+/* RESPONSIVE DESIGN (MOBILE & TABLETTE)       */
+/* ======================================================= */
+
+@media screen and (max-width: 768px) {
+
+  /* 1. On agrandit les textes de base pour la lisibilité */
+  body {
+    font-size: 16px; /* Texte plus lisible */
+  }
+
+  /* 2. Le Header et le Logo */
+  .header-content {
+    flex-direction: column; /* On empile le logo et le titre */
+    gap: 20px;
+  }
+  
+  .logo {
+    position: static; /* On enlève la position absolue pour qu'il prenne sa place */
+    transform: none;  /* On enlève le centrage vertical complexe */
+    height: 100px;    /* Un peu plus petit */
+    margin-bottom: 10px;
+  }
+  
+  .social-icons {
+    position: static; /* Pareil pour les réseaux sociaux, on les remet dans le flux */
+    transform: none;
+    margin-top: 20px;
+    justify-content: center;
+  }
+
+  /* 3. Le Menu de Navigation (Très important !) */
+  .main-nav ul {
+    flex-direction: column; /* Les liens se mettent les uns sous les autres */
+    align-items: center;    /* On centre tout */
+    gap: 10px;              /* Un peu d'espace entre chaque lien */
+  }
+  
+  .main-nav li {
+    width: 80%;             /* Les boutons prennent presque toute la largeur */
+    text-align: center;
+  }
+
+  /* 4. Les Sections Principales */
+  .welcome-section, .hero {
+    width: 90%;             /* On laisse une petite marge sur les côtés */
+    padding: 15px;
+    margin: 20px auto;
+  }
+
+  .title-container h1 {
+    font-size: 2.2em;       /* On réduit le gros titre */
+  }
+  
+  .quote {
+    font-size: 2em;         /* On réduit la citation */
+  }
+}

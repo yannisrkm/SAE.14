@@ -91,3 +91,36 @@
   from { opacity: 0; transform: translateY(-20px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+/* ================= RESPONSIVE GLOBAL ================= */
+@media screen and (max-width: 768px) {
+  
+  /* HEADER & NAV (Copié pour la cohérence) */
+  .header-content, .main-nav ul { flex-direction: column; }
+  .logo, .social-icons { position: static; transform: none; margin: 10px auto; }
+  .main-nav li { width: 80%; text-align: center; margin-bottom: 5px; }
+
+  /* GRILLES ET CARTES (Passe tout en colonne unique) */
+  .timeline, .legends-grid, .tickets-grid, .places-grid, .presentation-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  /* Ajustement des images et cartes */
+  .event, .legend-card, .ticket-card, .place, .personal-card {
+    width: 100% !important; /* Force la largeur à 100% de l'écran */
+    max-width: 400px;       /* Mais pas plus de 400px pour que ça reste joli */
+    margin-bottom: 30px;    /* Espace entre les éléments */
+  }
+  
+  .event {
+    flex-direction: column; /* Pour la timeline : image sous le texte */
+    border-left: none;      /* On change le style bordure */
+    border-top: 5px solid #004C97;
+  }
+  
+  .visit-hero h1, .about-hero h1 {
+    font-size: 2.5em; /* Titres plus petits */
+  }
+}
