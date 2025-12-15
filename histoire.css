@@ -80,6 +80,7 @@ header {
   background-color: #A50044;
 }
 
+/* RESEAUX SOCIAUX */
 .social-icons {
   position: absolute;
   right: 20px;
@@ -126,19 +127,14 @@ header {
 }
 
 @keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
+  to { transform: rotate(360deg); }
 }
 
 @keyframes fadeOut {
-  to {
-    opacity: 0;
-    visibility: hidden;
-  }
+  to { opacity: 0; visibility: hidden; }
 }
 
-/* ==================== SECTION HISTOIRE ==================== */
+/* ==================== SECTION HISTOIRE (CORRIGÉE) ==================== */
 .section-title {
   text-align: center;
   font-size: 2.5em;
@@ -150,7 +146,6 @@ header {
   background-clip: text;
   color: transparent;
   animation: gradientFlow 6s ease infinite;
-  /* animation qui fait bouger les couleurs */
 }
 
 .timeline {
@@ -159,46 +154,52 @@ header {
   padding: 20px;
 }
 
+/* C'est ici que j'ai stabilisé le cadrage */
 .event {
-  display: flex;
-  align-items: center;
+  display: flex; /* On garde les éléments côte à côte sur PC */
+  align-items: center; /* Centré verticalement */
   justify-content: space-between;
+  gap: 40px; /* Plus d'espace entre texte et image */
   margin-bottom: 60px;
-  gap: 30px;
-  flex-wrap: wrap;
   background: #f9f9f9;
   border-left: 5px solid #004C97;
   border-radius: 10px;
-  padding: 20px;
+  padding: 30px; /* Un peu plus d'espace interne */
   transition: transform 0.3s ease;
+  /* J'ai retiré flex-wrap pour éviter que ça casse bizarrement sur PC */
 }
 
 .event:hover {
   transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
 .event-text {
-  flex: 1 1 400px;
+  flex: 1; /* Le texte prend toute la place disponible */
 }
 
 .event h3 {
   color: #004C97;
-  font-size: 1.5em;
-  margin-bottom: 10px;
+  font-size: 1.8em;
+  margin-top: 0;
+  margin-bottom: 15px;
 }
 
 .event p {
   line-height: 1.6;
-  font-size: 1.05em;
+  font-size: 1.1em;
+  margin: 0;
 }
 
+/* Gestion stricte de l'image pour qu'elle ne casse pas le layout */
 .event img {
-  flex: 1 1 300px;
-  width: 100%;
+  width: 40%; /* L'image prend 40% de la largeur sur PC */
   max-width: 400px;
+  height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
+  object-fit: cover;
 }
 
 .event img:hover {
@@ -206,57 +207,19 @@ header {
 }
 
 @keyframes gradientFlow {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-.legends-grid {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  padding: 20px;
-}
-
-.legend-card {
-  background: #004C97;
-  color: white;
-  padding: 20px;
-  border-radius: 15px;
-  width: 250px;
-  text-align: center;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
-  border-bottom: 5px solid #A50044;
-}
-
-.legend-card:hover {
-  transform: translateY(-10px) scale(1.05);
-  background: #A50044;
-  border-bottom-color: #FFD700;
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* ==================== STYLE DES LÉGENDES ==================== */
-
-/* La grille pour aligner les cartes côte à côte */
 .legends-grid {
   display: flex;
   justify-content: center;
-  /* Centre les cartes au milieu de la page */
   gap: 30px;
   flex-wrap: wrap;
-  padding: 20px;
+  padding: 20px 20px 60px 20px;
 }
-
 
 .legend-card {
   background: #f9f9f9;
@@ -269,13 +232,12 @@ header {
   border-bottom: 5px solid #A50044;
 }
 
-/* L'effet au survol de la souris */
 .legend-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  border-bottom-color: #FFD700;
 }
 
-/* === LES IMAGES === */
 .legend-card img {
   width: 100%;
   height: 220px;
@@ -283,7 +245,6 @@ header {
   display: block;
 }
 
-/* Le texte dans la carte */
 .legend-card h4 {
   color: #004C97;
   margin: 15px 0 5px 0;
@@ -294,10 +255,6 @@ header {
   padding: 0 15px 20px 15px;
   font-size: 0.95em;
   color: #555;
-}
-
-.legend-card:nth-child(2) img {
-  object-position: center top;
 }
 
 /* ==================== FOOTER ==================== */
@@ -319,12 +276,13 @@ footer {
     flex-direction: column;
   }
 
-  .logo,
-  .social-icons {
+  .logo, .social-icons {
     position: static;
     transform: none;
     margin: 10px auto;
   }
+
+  .logo { height: 100px; } /* Logo un peu plus petit sur mobile */
 
   .main-nav li {
     width: 80%;
@@ -332,41 +290,38 @@ footer {
     margin-bottom: 5px;
   }
 
-  /* GRILLES ET CARTES */
-  .timeline,
-  .legends-grid,
-  .tickets-grid,
-  .places-grid,
-  .presentation-section {
-    flex-direction: column;
-    align-items: center;
+  /* --- CORRECTIF CADRAGE HISTOIRE MOBILE --- */
+  .timeline {
     padding: 10px;
   }
 
-  /* Ajustement des images et cartes */
-  .event,
-  .legend-card,
-  .ticket-card,
-  .place,
-  .personal-card {
-    width: 100% !important;
-    /* Force la largeur à 100% de l'écran */
-    max-width: 400px;
-    /* Mais pas plus de 400px pour que ça reste joli */
-    margin-bottom: 30px;
-    /* Espace entre les éléments */
-  }
-
   .event {
-    flex-direction: column;
-    /* Pour la timeline : image sous le texte */
-    border-left: none;
-    /* On change le style bordure */
-    border-top: 5px solid #004C97;
+    flex-direction: column; /* On empile verticalement */
+    text-align: center;     /* Texte centré */
+    border-left: none;      /* Plus de bordure à gauche */
+    border-top: 5px solid #004C97; /* Bordure en haut */
+    padding: 20px;
+    gap: 20px;
   }
 
-  .visit-hero h1,
-  .about-hero h1 {
-    font-size: 2.5em;
+  .event img {
+    width: 100%; /* L'image prend toute la largeur sur mobile */
+    max-width: 100%;
+    margin-top: 10px;
+  }
+
+  .event-text {
+    width: 100%;
+  }
+
+  /* Cartes légendes sur mobile */
+  .legends-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .legend-card {
+    width: 100%;
+    max-width: 400px;
   }
 }
