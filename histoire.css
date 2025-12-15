@@ -318,7 +318,7 @@ footer {
 
   .social-icons {
     position: static; 
-    transform: none; 
+    transform: none;
     margin-top: 20px;
     justify-content: center;
   }
@@ -337,4 +337,45 @@ footer {
 
   /* 4. Les Sections Histoires */
   .timeline {
-    width: 1
+    width: 100%;
+    padding: 0;
+  }
+
+  .event {
+    width: 90%; 
+    margin: 20px auto; 
+    flex-direction: column; /* Empilé */
+    text-align: center; 
+    padding: 20px;
+    border-left: none;
+    border-top: 5px solid #004C97;
+  }
+
+  .event-text {
+    width: 100%;
+  }
+
+  .event img {
+    order: -1; 
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .title-container h1 {
+    font-size: 2.2em; 
+  }
+
+  /* Cartes légendes sur mobile */
+  .legends-grid {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .legend-card {
+    width: 90%; /* Match la largeur des autres blocs */
+    max-width: 400px;
+    margin-bottom: 20px;
+  }
+}
