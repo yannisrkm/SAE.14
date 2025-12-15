@@ -91,8 +91,9 @@ header h1 {
 
 /* COULEURS DU TITRE */
 .fcbarca {
+  color: #FFD700; /* Jaune Or (Couleur du club aussi) -> Contraste validé ! */
   font-weight: bold;
-  color: #A50044;
+  text-shadow: 1px 1px 0 #000; /* Petite ombre pour faire joli */
 }
 
 .stadium {
