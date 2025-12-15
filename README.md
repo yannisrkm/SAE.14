@@ -3,12 +3,12 @@
 Bienvenue sur le dépôt de mon projet de site web statique dédié au mythique **Spotify Camp Nou**. 
 Ce projet a été réalisé dans le cadre de la **SAE 14** en 1ère année de **BUT R&T**.
 
-## 🌐 Lien vers le site en ligne
+## Lien vers le site en ligne
 Le site est hébergé via GitHub Pages et accessible à l'adresse suivante :
 **[Visiter le site du FC Barcelone Stadium](https://yannisrkm.github.io/SAE.14/)**
 
 
-## 📝 Présentation du Projet
+## Présentation du Projet
 L'objectif de ce projet était de concevoir un site web complet, structuré et esthétique en utilisant uniquement les langages standards du web, sans frameworks lourds. 
 
 Le thème choisi est le **FC Barcelone**, un sujet passion passionnant permettant de mettre en avant :
@@ -16,7 +16,7 @@ Le thème choisi est le **FC Barcelone**, un sujet passion passionnant permettan
 - Les informations touristiques et la billetterie.
 - Une présentation personnelle de l'auteur.
 
-### 🎯 Objectifs Pédagogiques
+### Objectifs Pédagogiques
 - Maîtrise du **HTML** sémantique.
 - Maîtrise du **CSS** (Flexbox, Animations, Responsive Design).
 - Utilisation d'un gestionnaire de version (**Git/GitHub**).
@@ -24,7 +24,7 @@ Le thème choisi est le **FC Barcelone**, un sujet passion passionnant permettan
 
 ---
 
-## 🛠️ Technologies Utilisées
+## Technologies Utilisées
 
 Ce site a été développé avec une approche "Mobile First" et respecte les standards actuels :
 
@@ -40,7 +40,7 @@ Ce site a été développé avec une approche "Mobile First" et respecte les sta
 
 ---
 
-## 📱 Fonctionnalités Clés
+## Fonctionnalités Clés
 
 1.  **Design Responsive** : Le site s'adapte automatiquement à toutes les tailles d'écran (Smartphones, Tablettes, Ordinateurs).
 2.  **Animations Fluides** :
@@ -51,7 +51,7 @@ Ce site a été développé avec une approche "Mobile First" et respecte les sta
 4.  **Galerie & Médias** : Intégration d'images optimisées avec gestion du cadrage (`object-fit`).
 
 
-## 📂 Structure du Projet
+## Structure du Projet
 
 Racine:
 - index.html        # Page d'accueil (Renommée pour GitHub Pages)
