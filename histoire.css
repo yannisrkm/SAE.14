@@ -318,7 +318,7 @@ footer {
 
   .social-icons {
     position: static; 
-    transform: none;
+    transform: none; 
     margin-top: 20px;
     justify-content: center;
   }
