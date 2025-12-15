@@ -27,8 +27,14 @@ header {
   margin: 0;
 }
 
-.fcbarca { color: #A50044; font-weight: bold; }
-.stadium { color: white; }
+.fcbarca {
+  color: #A50044;
+  font-weight: bold;
+}
+
+.stadium {
+  color: white;
+}
 
 .subtitle {
   font-size: 1.4em;
@@ -45,21 +51,18 @@ header {
   padding: 0;
 }
 
-/* Cherche ça dans ton CSS */
+/* Effet titre */
 .main-nav li:hover {
   transform: translateY(-3px);
-  /* ombre portée rouge/rosée */
   box-shadow: 0 4px 15px rgba(165, 0, 68, 0.4);
-  /* On s'assure que la bordure change aussi */
-  border-color: #FFD700; /* Le jaune or au survol */
+  border-color: #FFD700;
 }
 
-/* une transition sur tout */
+/* transition sur tout */
 .main-nav li {
   border: 2px solid #A50044;
   border-radius: 10px;
   overflow: hidden;
-  /* MODIFIE LA TRANSITION ICI pour inclure le box-shadow et le border */
   transition: all 0.3s ease;
 }
 
@@ -123,7 +126,9 @@ header {
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes fadeOut {
@@ -139,13 +144,13 @@ header {
   font-size: 2.5em;
   font-weight: 800;
   margin: 40px 0;
-  /* Le dégradé Blaugrana (Bleu et Grenat) + Or */
   background: linear-gradient(90deg, #004C97, #A50044, #FFD700, #004C97);
   background-size: 300%;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  animation: gradientFlow 6s ease infinite; /* L'animation qui fait bouger les couleurs */
+  animation: gradientFlow 6s ease infinite;
+  /* animation qui fait bouger les couleurs */
 }
 
 .timeline {
@@ -192,7 +197,7 @@ header {
   width: 100%;
   max-width: 400px;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
 }
 
@@ -201,9 +206,17 @@ header {
 }
 
 @keyframes gradientFlow {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .legends-grid {
@@ -221,7 +234,7 @@ header {
   border-radius: 15px;
   width: 250px;
   text-align: center;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
   border-bottom: 5px solid #A50044;
 }
@@ -237,36 +250,37 @@ header {
 /* La grille pour aligner les cartes côte à côte */
 .legends-grid {
   display: flex;
-  justify-content: center; /* Centre les cartes au milieu de la page */
-  gap: 30px;              
-  flex-wrap: wrap;        
+  justify-content: center;
+  /* Centre les cartes au milieu de la page */
+  gap: 30px;
+  flex-wrap: wrap;
   padding: 20px;
 }
 
-/* La carte elle-même */
+
 .legend-card {
   background: #f9f9f9;
-  border-radius: 15px;    
-  width: 300px;           /* Largeur fixe pour que tout soit aligné */
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Petite ombre */
-  overflow: hidden;       /* Important : empêche l'image de dépasser des coins arrondis */
-  transition: transform 0.3s ease; /* Animation fluide au survol */
+  border-radius: 15px;
+  width: 300px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
   text-align: center;
-  border-bottom: 5px solid #A50044; 
+  border-bottom: 5px solid #A50044;
 }
 
 /* L'effet au survol de la souris */
 .legend-card:hover {
-  transform: translateY(-10px); 
-  box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
 }
 
 /* === LES IMAGES === */
 .legend-card img {
-  width: 100%;           
-  height: 220px;         
-  object-fit: cover;      
-  display: block;         
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
 }
 
 /* Le texte dans la carte */
@@ -285,6 +299,7 @@ header {
 .legend-card:nth-child(2) img {
   object-position: center top;
 }
+
 /* ==================== FOOTER ==================== */
 footer {
   text-align: center;
@@ -297,33 +312,61 @@ footer {
 
 /* ================= RESPONSIVE GLOBAL ================= */
 @media screen and (max-width: 768px) {
-  
-  /* HEADER & NAV (Copié pour la cohérence) */
-  .header-content, .main-nav ul { flex-direction: column; }
-  .logo, .social-icons { position: static; transform: none; margin: 10px auto; }
-  .main-nav li { width: 80%; text-align: center; margin-bottom: 5px; }
 
-  /* GRILLES ET CARTES (Passe tout en colonne unique) */
-  .timeline, .legends-grid, .tickets-grid, .places-grid, .presentation-section {
+  /* HEADER & NAV */
+  .header-content,
+  .main-nav ul {
+    flex-direction: column;
+  }
+
+  .logo,
+  .social-icons {
+    position: static;
+    transform: none;
+    margin: 10px auto;
+  }
+
+  .main-nav li {
+    width: 80%;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  /* GRILLES ET CARTES */
+  .timeline,
+  .legends-grid,
+  .tickets-grid,
+  .places-grid,
+  .presentation-section {
     flex-direction: column;
     align-items: center;
     padding: 10px;
   }
 
   /* Ajustement des images et cartes */
-  .event, .legend-card, .ticket-card, .place, .personal-card {
-    width: 100% !important; /* Force la largeur à 100% de l'écran */
-    max-width: 400px;       /* Mais pas plus de 400px pour que ça reste joli */
-    margin-bottom: 30px;    /* Espace entre les éléments */
+  .event,
+  .legend-card,
+  .ticket-card,
+  .place,
+  .personal-card {
+    width: 100% !important;
+    /* Force la largeur à 100% de l'écran */
+    max-width: 400px;
+    /* Mais pas plus de 400px pour que ça reste joli */
+    margin-bottom: 30px;
+    /* Espace entre les éléments */
   }
-  
+
   .event {
-    flex-direction: column; /* Pour la timeline : image sous le texte */
-    border-left: none;      /* On change le style bordure */
+    flex-direction: column;
+    /* Pour la timeline : image sous le texte */
+    border-left: none;
+    /* On change le style bordure */
     border-top: 5px solid #004C97;
   }
-  
-  .visit-hero h1, .about-hero h1 {
-    font-size: 2.5em; /* Titres plus petits */
+
+  .visit-hero h1,
+  .about-hero h1 {
+    font-size: 2.5em;
   }
 }

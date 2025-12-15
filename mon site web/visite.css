@@ -1,9 +1,8 @@
 /* ==================== HERO SECTION (Entrez dans la légende) ==================== */
 .visit-hero {
-  /* J'ai changé le lien de l'image par une vue panoramique fiable depuis Wikimedia */
+
   background: linear-gradient(rgba(0, 76, 151, 0.8), rgba(165, 0, 68, 0.6)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Camp_Nou_view.jpg/1280px-Camp_Nou_view.jpg');
-  
-  /* Le reste ne change pas */
+
   background-size: cover;
   background-position: center;
   height: 60vh;
@@ -13,7 +12,7 @@
   align-items: center;
   color: white;
   text-align: center;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* Animation d'entrée pour le titre */
@@ -22,13 +21,15 @@
   margin: 0;
   text-transform: uppercase;
   letter-spacing: 5px;
-  text-shadow: 2px 2px 0px #A50044; /* Ombre rouge */
+  text-shadow: 2px 2px 0px #A50044;
+  /* Ombre rouge */
   animation: slideDown 1s ease-out;
 }
 
 .visit-hero p {
   font-size: 1.5em;
-  color: #FFD700; /* Or */
+  color: #FFD700;
+  /* Or */
   margin-top: 15px;
   font-weight: bold;
   animation: fadeIn 1.5s ease-out;
@@ -53,7 +54,7 @@
 .ticket-card {
   background: white;
   border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   width: 300px;
   overflow: hidden;
   position: relative;
@@ -75,17 +76,52 @@
   color: white;
 }
 
-.card-header.basic { background: #004C97; }
-.card-header.premium { background: linear-gradient(45deg, #A50044, #004C97); }
-.card-header.match { background: #333; }
+.card-header.basic {
+  background: #004C97;
+}
 
-.card-header h3 { margin: 0; font-size: 1.5em; }
-.price { display: block; font-size: 2.5em; font-weight: bold; margin-top: 10px; }
+.card-header.premium {
+  background: linear-gradient(45deg, #A50044, #004C97);
+}
 
-.card-body { padding: 20px; text-align: center; }
-.card-body ul { list-style: none; padding: 0; text-align: left; margin-bottom: 25px; }
-.card-body li { margin-bottom: 12px; font-size: 1.1em; color: #555; }
-.card-body i { color: #A50044; width: 25px; }
+.card-header.match {
+  background: #333;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.price {
+  display: block;
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.card-body {
+  padding: 20px;
+  text-align: center;
+}
+
+.card-body ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  margin-bottom: 25px;
+}
+
+.card-body li {
+  margin-bottom: 12px;
+  font-size: 1.1em;
+  color: #555;
+}
+
+.card-body i {
+  color: #A50044;
+  width: 25px;
+}
 
 .btn-ticket {
   background-color: #A50044;
@@ -98,15 +134,28 @@
   transition: background 0.3s;
 }
 
-.btn-ticket:hover { background-color: #004C97; }
+.btn-ticket:hover {
+  background-color: #004C97;
+}
+
 .tag {
-  position: absolute; top: 0; right: 0;
-  background: #FFD700; color: #004C97;
-  padding: 5px 15px; font-weight: bold; font-size: 0.8em;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #FFD700;
+  color: #004C97;
+  padding: 5px 15px;
+  font-weight: bold;
+  font-size: 0.8em;
 }
 
 /* Section Alentours */
-.intro-text { text-align: center; font-size: 1.2em; color: #666; margin-bottom: 30px; }
+.intro-text {
+  text-align: center;
+  font-size: 1.2em;
+  color: #666;
+  margin-bottom: 30px;
+}
 
 /* ==================== CARTES VILLES (Alentours) ==================== */
 .places-grid {
@@ -122,15 +171,15 @@
   background: white;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-bottom: 4px solid transparent;
 }
 
-/* Animation au survol : la carte monte et la bordure devient or */
+/* Animation au survol */
 .place:hover {
   transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0, 76, 151, 0.2); /* Ombre bleue légère */
+  box-shadow: 0 15px 30px rgba(0, 76, 151, 0.2);
   border-bottom-color: #FFD700;
 }
 
@@ -147,7 +196,8 @@
 }
 
 .place:hover img {
-  transform: scale(1.1); /* Zoom doux sur l'image */
+  transform: scale(1.1);
+  /* Zoom doux sur l'image */
 }
 
 .place h4 {
@@ -166,39 +216,53 @@
 
 /* Keyframes pour les animations du haut */
 @keyframes slideDown {
-  from { transform: translateY(-50px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 /* ==================== MARKETING PITCH (Style "Histoire") ==================== */
 .marketing-pitch {
-  max-width: 900px;           /* Largeur max pour que ce soit lisible */
-  margin: 0 auto 50px auto;   /* Centré horizontalement + marge en bas */
-  
-  /* Le style "Carte" comme dans Histoire */
+  max-width: 900px;
+  /* Largeur max pour que ce soit lisible */
+  margin: 0 auto 50px auto;
+  /* Centré horizontalement + marge en bas */
+
+
   background: #f9f9f9;
-  border-left: 6px solid #004C97; /* Bordure BLEUE au repos */
+  border-left: 6px solid #004C97;
   border-radius: 10px;
   padding: 40px;
-  
+
   /* Ombre douce */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
   /* Animation fluide pour tout changement */
   transition: all 0.4s ease;
-  position: relative; /* Pour ajuster le contenu si besoin */
+  position: relative;
 }
 
-/* L'animation au survol (La touche Barça) */
+/* L'animation au survol */
 .marketing-pitch:hover {
-  transform: translateY(-5px);    /* Le bloc remonte légèrement */
-  border-left-color: #A50044;     /* La bordure devient ROUGE */
-  box-shadow: 0 15px 30px rgba(0,0,0,0.15); /* L'ombre grandit */
+  transform: translateY(-5px);
+  border-left-color: #A50044;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
 /* Le style du texte à l'intérieur */
@@ -206,48 +270,77 @@
   font-size: 1.2em;
   line-height: 1.8;
   color: #333;
-  text-align: center; /* Texte centré pour l'élégance */
+  text-align: center;
   margin: 0;
 }
 
 /* Mise en valeur de la phrase de fin en gras */
 .marketing-pitch strong {
-  color: #A50044;     /* On met la phrase clé en rouge */
+  color: #A50044;
   font-weight: bold;
-  display: block;     /* On la met sur sa propre ligne */
+  display: block;
   margin-top: 15px;
   font-size: 1.1em;
 }
 
 /* ================= RESPONSIVE GLOBAL ================= */
 @media screen and (max-width: 768px) {
-  
-  /* HEADER & NAV (Copié pour la cohérence) */
-  .header-content, .main-nav ul { flex-direction: column; }
-  .logo, .social-icons { position: static; transform: none; margin: 10px auto; }
-  .main-nav li { width: 80%; text-align: center; margin-bottom: 5px; }
 
-  /* GRILLES ET CARTES (Passe tout en colonne unique) */
-  .timeline, .legends-grid, .tickets-grid, .places-grid, .presentation-section {
+  /* HEADER & NAV */
+  .header-content,
+  .main-nav ul {
+    flex-direction: column;
+  }
+
+  .logo,
+  .social-icons {
+    position: static;
+    transform: none;
+    margin: 10px auto;
+  }
+
+  .main-nav li {
+    width: 80%;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  /* GRILLES ET CARTES */
+  .timeline,
+  .legends-grid,
+  .tickets-grid,
+  .places-grid,
+  .presentation-section {
     flex-direction: column;
     align-items: center;
     padding: 10px;
   }
 
   /* Ajustement des images et cartes */
-  .event, .legend-card, .ticket-card, .place, .personal-card {
-    width: 100% !important; /* Force la largeur à 100% de l'écran */
-    max-width: 400px;       /* Mais pas plus de 400px pour que ça reste joli */
-    margin-bottom: 30px;    /* Espace entre les éléments */
+  .event,
+  .legend-card,
+  .ticket-card,
+  .place,
+  .personal-card {
+    width: 100% !important;
+    /* Force la largeur à 100% de l'écran */
+    max-width: 400px;
+    /* Mais pas plus de 400px pour que ça reste joli */
+    margin-bottom: 30px;
+    /* Espace entre les éléments */
   }
-  
+
   .event {
-    flex-direction: column; /* Pour la timeline : image sous le texte */
-    border-left: none;      /* On change le style bordure */
+    flex-direction: column;
+    /* Pour la timeline : image sous le texte */
+    border-left: none;
+    /* On change le style bordure */
     border-top: 5px solid #004C97;
   }
-  
-  .visit-hero h1, .about-hero h1 {
-    font-size: 2.5em; /* Titres plus petits */
+
+  .visit-hero h1,
+  .about-hero h1 {
+    font-size: 2.5em;
+    /* Titres plus petits */
   }
 }

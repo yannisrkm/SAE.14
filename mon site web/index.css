@@ -37,7 +37,9 @@ body {
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes fadeOut {
@@ -140,13 +142,12 @@ header h1 {
 }
 
 
-/* Cherche ça dans ton CSS */
+
 .main-nav li:hover {
   transform: translateY(-3px);
-  /* ombre portée rouge/rosée */
   box-shadow: 0 4px 15px rgba(165, 0, 68, 0.4);
-  /* On s'assure que la bordure change aussi */
-  border-color: #FFD700; /* Le jaune or au survol */
+  border-color: #FFD700;
+  /* Le jaune or au survol */
 }
 
 /* une transition sur tout */
@@ -154,7 +155,6 @@ header h1 {
   border: 2px solid #A50044;
   border-radius: 10px;
   overflow: hidden;
-  /* MODIFIE LA TRANSITION ICI pour inclure le box-shadow et le border */
   transition: all 0.3s ease;
 }
 
@@ -179,12 +179,13 @@ header h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* centre verticalement */
+  justify-content: center;
+  /* centre verticalement */
   text-align: center;
 }
 
 .quote {
-  font-family: 'Momo Signature', cursive; /* Garde ta police si elle marche */
+  font-family: 'Momo Signature', cursive;
   font-size: 3.5em;
   font-weight: bold;
   background: linear-gradient(to right, #A50044, #FFD700);
@@ -194,33 +195,42 @@ header h1 {
   text-align: center;
   margin-bottom: 5px;
   animation: popIn 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
-  opacity: 0; 
-}
-
-.quote-translate {
-  /* ... garde tes styles ... */
-  animation: fadeIn 2s ease forwards;
-  animation-delay: 1s; /* Apparaît après la citation principale */
   opacity: 0;
 }
 
-/* Les Keyframes à ajouter à la fin du fichier */
+.quote-translate {
+  animation: fadeIn 2s ease forwards;
+  animation-delay: 1s;
+  opacity: 0;
+}
+
+
 @keyframes popIn {
-  0% { transform: scale(0.5); opacity: 0; }
-  100% { transform: scale(1); opacity: 1; }
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 @keyframes fadeIn {
-  to { opacity: 1; }
+  to {
+    opacity: 1;
+  }
 }
 
 .hero img {
   display: block;
-  margin: 0 auto;          /* centre horizontalement */
+  margin: 0 auto;
+  /* centre horizontalement */
   width: 90%;
   max-width: 900px;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s ease;
 }
 
@@ -248,7 +258,7 @@ figcaption {
   background: #f9f9f9;
   border-left: 5px solid #A50044;
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .welcome-title {
@@ -284,53 +294,67 @@ footer {
 
   /* 1. On agrandit les textes de base pour la lisibilité */
   body {
-    font-size: 16px; /* Texte plus lisible */
+    font-size: 16px;
+    /* Texte plus lisible */
   }
 
   /* 2. Le Header et le Logo */
   .header-content {
-    flex-direction: column; /* On empile le logo et le titre */
+    flex-direction: column;
+    /* On empile le logo et le titre */
     gap: 20px;
   }
-  
+
   .logo {
-    position: static; /* On enlève la position absolue pour qu'il prenne sa place */
-    transform: none;  /* On enlève le centrage vertical complexe */
-    height: 100px;    /* Un peu plus petit */
+    position: static;
+    /* On enlève la position absolue pour qu'il prenne sa place */
+    transform: none;
+    /* On enlève le centrage vertical complexe */
+    height: 100px;
+    /* Un peu plus petit */
     margin-bottom: 10px;
   }
-  
+
   .social-icons {
-    position: static; /* Pareil pour les réseaux sociaux, on les remet dans le flux */
+    position: static;
+    /* Pareil pour les réseaux sociaux, on les remet dans le flux */
     transform: none;
     margin-top: 20px;
     justify-content: center;
   }
 
-  /* 3. Le Menu de Navigation (Très important !) */
+  /* 3. Le Menu de Navigation */
   .main-nav ul {
-    flex-direction: column; /* Les liens se mettent les uns sous les autres */
-    align-items: center;    /* On centre tout */
-    gap: 10px;              /* Un peu d'espace entre chaque lien */
+    flex-direction: column;
+    /* Les liens se mettent les uns sous les autres */
+    align-items: center;
+    /* On centre tout */
+    gap: 10px;
+    /* Un peu d'espace entre chaque lien */
   }
-  
+
   .main-nav li {
-    width: 80%;             /* Les boutons prennent presque toute la largeur */
+    width: 80%;
+    /* Les boutons prennent presque toute la largeur */
     text-align: center;
   }
 
   /* 4. Les Sections Principales */
-  .welcome-section, .hero {
-    width: 90%;             /* On laisse une petite marge sur les côtés */
+  .welcome-section,
+  .hero {
+    width: 90%;
+    /* On laisse une petite marge sur les côtés */
     padding: 15px;
     margin: 20px auto;
   }
 
   .title-container h1 {
-    font-size: 2.2em;       /* On réduit le gros titre */
+    font-size: 2.2em;
+    /* On réduit le gros titre */
   }
-  
+
   .quote {
-    font-size: 2em;         /* On réduit la citation */
+    font-size: 2em;
+    /* On réduit la citation */
   }
 }

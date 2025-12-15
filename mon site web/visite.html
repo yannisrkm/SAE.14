@@ -2,130 +2,134 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FCBarcelone - Visite & Billetterie</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="visite.css">
-    <script src="https://kit.fontawesome.com/0acb75a9e8.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FCBarcelone - Visite & Billetterie</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="visite.css">
+  <script src="https://kit.fontawesome.com/0acb75a9e8.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
- <!-- ============= LOADER ============= -->
+  <!-- ============= LOADER ============= -->
   <div id="loader">
     <h1>Chargement <span>.</span><span>.</span><span>.</span></h1>
     <span class="loader"></span>
   </div>
-    <!-- =============== HEADER =============== -->
-    <header>
-        <div class="header-content">
-            <img src="https://www.freepnglogos.com/uploads/fc-barcelona-png-logo/fc-barcelona-png-logo-0.png"
-                alt="Logo FCB" class="logo">
-            <div class="title-container">
-                <h1><span class="fcbarca">FCBarcelone</span> <span class="stadium">Stadium</span></h1>
-                <h2 class="subtitle">Experience & Tour</h2>
-            </div>
-        </div>
-        <nav class="main-nav">
+  <!-- =============== HEADER =============== -->
+  <header>
+    <div class="header-content">
+      <img src="https://www.freepnglogos.com/uploads/fc-barcelona-png-logo/fc-barcelona-png-logo-0.png" alt="Logo FCB"
+        class="logo">
+      <div class="title-container">
+        <h1><span class="fcbarca">FCBarcelone</span> <span class="stadium">Stadium</span></h1>
+        <h2 class="subtitle">Experience & Tour</h2>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="histoire.html">Histoire</a></li>
+        <li><a href="visite.html" class="active">Visite & Tour</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+      </ul>
+    </nav>
+    <!-- Icônes réseaux sociaux -->
+    <nav class="social-icons">
+      <a href="https://www.facebook.com/FCBarcelona" target="_blank">
+        <span class="fa-brands fa-facebook fa-2x"></span>
+      </a>
+      <a href="https://www.instagram.com/fcbarcelona/" target="_blank">
+        <span class="fa-brands fa-instagram fa-2x"></span>
+      </a>
+      <a href="https://twitter.com/FCBarcelona" target="_blank">
+        <span class="fa-brands fa-twitter fa-2x"></span>
+      </a>
+      <a href="https://www.spotify.com/" target="_blank">
+        <span class="fa-brands fa-spotify fa-2x"></span>
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="visit-hero">
+      <h2>Entrez dans la légende</h2>
+      <p>Découvrez les coulisses du plus grand stade d'Europe</p>
+    </section>
+
+    <section class="tickets-section">
+      <h2 class="section-title">Choisissez votre Expérience</h2>
+
+      <div class="tickets-grid">
+        <div class="ticket-card">
+          <div class="card-header basic">
+            <h3>Barça Museum</h3>
+            <span class="price">28€</span>
+          </div>
+          <div class="card-body">
             <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="histoire.html">Histoire</a></li>
-                <li><a href="visite.html" class="active">Visite & Tour</a></li>
-                <li><a href="apropos.html">À propos</a></li>
+              <li><i class="fa-solid fa-trophy"></i> Musée du Club</li>
+              <li><i class="fa-solid fa-headphones"></i> Audioguide inclus</li>
+              <li><i class="fa-solid fa-ban"></i> Pas d'accès terrain</li>
             </ul>
-        </nav>
-         <!-- Icônes réseaux sociaux -->
-<nav class="social-icons">
-  <a href="https://www.facebook.com/FCBarcelona" target="_blank">
-    <span class="fa-brands fa-facebook fa-2x"></span>
-  </a>
-  <a href="https://www.instagram.com/fcbarcelona/" target="_blank">
-    <span class="fa-brands fa-instagram fa-2x"></span>
-  </a>
-  <a href="https://twitter.com/FCBarcelona" target="_blank">
-    <span class="fa-brands fa-twitter fa-2x"></span>
-  </a>
-  <a href="https://www.spotify.com/" target="_blank">
-    <span class="fa-brands fa-spotify fa-2x"></span>
-  </a>
-</nav>
-    </header>
+            <button class="btn-ticket">Réserver</button>
+          </div>
+        </div>
 
-    <main>
-        <section class="visit-hero">
-            <h2>Entrez dans la légende</h2>
-            <p>Découvrez les coulisses du plus grand stade d'Europe</p>
-        </section>
+        <div class="ticket-card featured">
+          <div class="tag">MEILLEURE VENTE</div>
+          <div class="card-header premium">
+            <h3>Total Experience</h3>
+            <span class="price">49€</span>
+          </div>
+          <div class="card-body">
+            <ul>
+              <li><i class="fa-solid fa-trophy"></i> Musée + Coupe des Champions</li>
+              <li><i class="fa-solid fa-person-running"></i> Accès Tunnel Joueurs</li>
+              <li><i class="fa-solid fa-vr-cardboard"></i> Expérience VR 360°</li>
+              <li><i class="fa-solid fa-shirt"></i> Vestiaires</li>
+            </ul>
+            <button class="btn-ticket">Réserver</button>
+          </div>
+        </div>
 
-        <section class="tickets-section">
-            <h2 class="section-title">Choisissez votre Expérience</h2>
-
-            <div class="tickets-grid">
-                <div class="ticket-card">
-                    <div class="card-header basic">
-                        <h3>Barça Museum</h3>
-                        <span class="price">28€</span>
-                    </div>
-                    <div class="card-body">
-                        <ul>
-                            <li><i class="fa-solid fa-trophy"></i> Musée du Club</li>
-                            <li><i class="fa-solid fa-headphones"></i> Audioguide inclus</li>
-                            <li><i class="fa-solid fa-ban"></i> Pas d'accès terrain</li>
-                        </ul>
-                        <button class="btn-ticket">Réserver</button>
-                    </div>
-                </div>
-
-                <div class="ticket-card featured">
-                    <div class="tag">MEILLEURE VENTE</div>
-                    <div class="card-header premium">
-                        <h3>Total Experience</h3>
-                        <span class="price">49€</span>
-                    </div>
-                    <div class="card-body">
-                        <ul>
-                            <li><i class="fa-solid fa-trophy"></i> Musée + Coupe des Champions</li>
-                            <li><i class="fa-solid fa-person-running"></i> Accès Tunnel Joueurs</li>
-                            <li><i class="fa-solid fa-vr-cardboard"></i> Expérience VR 360°</li>
-                            <li><i class="fa-solid fa-shirt"></i> Vestiaires</li>
-                        </ul>
-                        <button class="btn-ticket">Réserver</button>
-                    </div>
-                </div>
-
-                <div class="ticket-card">
-                    <div class="card-header match">
-                        <h3>Match Day Tour</h3>
-                        <span class="price">99€</span>
-                    </div>
-                    <div class="card-body">
-                        <ul>
-                            <li><i class="fa-solid fa-star"></i> Visite jour de match</li>
-                            <li><i class="fa-solid fa-tv"></i> Zone Presse</li>
-                            <li><i class="fa-solid fa-champagne-glasses"></i> Accès VIP Lounge</li>
-                        </ul>
-                        <button class="btn-ticket">Réserver</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="city-guide">
+        <div class="ticket-card">
+          <div class="card-header match">
+            <h3>Match Day Tour</h3>
+            <span class="price">99€</span>
+          </div>
+          <div class="card-body">
+            <ul>
+              <li><i class="fa-solid fa-star"></i> Visite jour de match</li>
+              <li><i class="fa-solid fa-tv"></i> Zone Presse</li>
+              <li><i class="fa-solid fa-champagne-glasses"></i> Accès VIP Lounge</li>
+            </ul>
+            <button class="btn-ticket">Réserver</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="city-guide">
       <h2 class="section-title">Barcelone : Plus qu'une ville</h2>
-      
+
       <div class="marketing-pitch">
-  <p>
-    Vivre l'expérience Barça, ce n'est pas seulement entrer dans un stade, c'est plonger au cœur d'une identité.
-    Profitez de votre venue au Spotify Camp Nou pour découvrir une ville qui respire le football, l'art et la passion.
-    Des flèches de la Sagrada Familia aux ruelles du quartier gothique, prolongez la magie du match par une escapade inoubliable.
-    <strong>"Le stade est votre temple, Barcelone est votre jardin."</strong>
-  </p>
-</div>
-      
+        <p>
+          Vivre l'expérience Barça, ce n'est pas seulement entrer dans un stade, c'est plonger au cœur d'une identité.
+          Profitez de votre venue au Spotify Camp Nou pour découvrir une ville qui respire le football, l'art et la
+          passion.
+          Des flèches de la Sagrada Familia aux ruelles du quartier gothique, prolongez la magie du match par une
+          escapade inoubliable.
+          <strong>"Le stade est votre temple, Barcelone est votre jardin."</strong>
+        </p>
+      </div>
+
       <div class="places-grid">
         <div class="place">
           <div class="img-container">
-            <img src="https://catechese.catholique.fr/wp-content/uploads/sites/15/2021/06/LOasis-20_Art-pour-dire-Dieu-scaled.jpg" alt="Sagrada Familia">
+            <img
+              src="https://catechese.catholique.fr/wp-content/uploads/sites/15/2021/06/LOasis-20_Art-pour-dire-Dieu-scaled.jpg"
+              alt="Sagrada Familia">
           </div>
           <h4>La Sagrada Familia</h4>
           <p>Le chef-d'œuvre inachevé de Gaudí, l'âme de Barcelone.</p>
@@ -133,7 +137,9 @@
 
         <div class="place">
           <div class="img-container">
-            <img src="https://static-resources-elementor.mirai.com/wp-content/uploads/sites/852/esta-Las-Ramblas-de-Barcelona-1024x682-1.jpg" alt="La Rambla">
+            <img
+              src="https://static-resources-elementor.mirai.com/wp-content/uploads/sites/852/esta-Las-Ramblas-de-Barcelona-1024x682-1.jpg"
+              alt="La Rambla">
           </div>
           <h4>La Rambla</h4>
           <p>L'artère bouillonnante où les supporters célèbrent les titres.</p>
@@ -141,7 +147,9 @@
 
         <div class="place">
           <div class="img-container">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Aerial_view_of_Barceloneta_Beach_and_Port_Vell_in_Barcelona%2C_Spain_%2851226238126%29.jpg/330px-Aerial_view_of_Barceloneta_Beach_and_Port_Vell_in_Barcelona%2C_Spain_%2851226238126%29.jpg" alt="Barceloneta">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Aerial_view_of_Barceloneta_Beach_and_Port_Vell_in_Barcelona%2C_Spain_%2851226238126%29.jpg/330px-Aerial_view_of_Barceloneta_Beach_and_Port_Vell_in_Barcelona%2C_Spain_%2851226238126%29.jpg"
+              alt="Barceloneta">
           </div>
           <h4>Barceloneta</h4>
           <p>Détente au soleil et tapas face à la mer Méditerranée.</p>
@@ -149,11 +157,11 @@
       </div>
     </section>
 
-    </main>
+  </main>
 
-    <footer>
-        <p>© 2025 FCBarcelone Stadium - Page Visite / RUKIRAMARIGO Yannis</p>
-    </footer>
+  <footer>
+    <p>© 2025 FCBarcelone Stadium - Page Visite / RUKIRAMARIGO Yannis</p>
+  </footer>
 </body>
 
 </html>
