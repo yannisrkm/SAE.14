@@ -1,4 +1,4 @@
-/* ==================== STYLE GLOBAL ==================== */
+/* ==================== STYLE GLOBAL (Identique Index) ==================== */
 body {
   margin: 0;
   font-family: 'Roboto Condensed', Arial, sans-serif;
@@ -6,12 +6,26 @@ body {
   color: #333;
 }
 
+/* ==================== HEADER (Identique Index) ==================== */
 header {
   position: relative;
   background-color: #004C97;
   color: white;
   padding: 45px 0;
   text-align: center;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .logo {
@@ -42,6 +56,11 @@ header {
   margin-top: 5px;
 }
 
+/* ==================== NAVIGATION (Identique Index) ==================== */
+.main-nav {
+  margin-top: 10px;
+}
+
 .main-nav ul {
   list-style: none;
   display: flex;
@@ -51,19 +70,17 @@ header {
   padding: 0;
 }
 
-/* Effet titre */
-.main-nav li:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 15px rgba(165, 0, 68, 0.4);
-  border-color: #FFD700;
-}
-
-/* transition sur tout */
 .main-nav li {
   border: 2px solid #A50044;
   border-radius: 10px;
   overflow: hidden;
   transition: all 0.3s ease;
+}
+
+.main-nav li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(165, 0, 68, 0.4);
+  border-color: #FFD700;
 }
 
 .main-nav a {
@@ -80,6 +97,7 @@ header {
   background-color: #A50044;
 }
 
+/* ==================== RESEAUX SOCIAUX (Identique Index) ==================== */
 .social-icons {
   position: absolute;
   right: 20px;
@@ -133,7 +151,7 @@ header {
   to { opacity: 0; visibility: hidden; }
 }
 
-/* ==================== SECTION HISTOIRE ==================== */
+/* ==================== SECTION HISTOIRE (Desktop) ==================== */
 .section-title {
   text-align: center;
   font-size: 2.5em;
@@ -153,12 +171,10 @@ header {
   padding: 20px;
 }
 
-/* Style de base (Ordinateur) : Texte à gauche, Image à droite */
 .event {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  text-align: left; /* Alignement à gauche par défaut */
   gap: 40px;
   margin-bottom: 60px;
   background: #f9f9f9;
@@ -236,7 +252,7 @@ header {
   border-bottom-color: #FFD700;
 }
 
-/* --- RÈGLE GÉNÉRALE POUR TOUTES LES IMAGES (Xavi, Iniesta, Messi...) --- */
+/* IMAGES LÉGENDES (Normal) */
 .legend-card img {
   width: 100%;
   height: 220px;
@@ -245,7 +261,7 @@ header {
   display: block;
 }
 
-/* --- RÈGLE SPÉCIALE JUSTE POUR RONALDINHO (La 2ème carte) --- */
+/* IMAGE RONALDINHO (Spécifique) */
 .legend-card:nth-child(2) img {
   object-position: top;
 }
@@ -272,62 +288,53 @@ footer {
   margin-top: 30px;
 }
 
-/* ================= RESPONSIVE GLOBAL (MOBILE) ================= */
+
+/* ======================================================= */
+/* RESPONSIVE DESIGN (COPIÉ DE INDEX.CSS)                 */
+/* ======================================================= */
+
 @media screen and (max-width: 768px) {
 
-  /* HEADER & NAV */
-  .header-content,
+  /* 1. On agrandit les textes */
+  body {
+    font-size: 16px;
+  }
+
+  /* 2. Le Header et le Logo (Logique Index) */
+  .header-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .logo {
+    position: static; /* On remet le logo dans le flux normal */
+    transform: none;
+    height: 100px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  .social-icons {
+    position: static; 
+    transform: none;
+    margin-top: 20px;
+    justify-content: center;
+  }
+
+  /* 3. Le Menu de Navigation */
   .main-nav ul {
     flex-direction: column;
+    align-items: center;
+    gap: 10px;
   }
-
-  .logo, .social-icons {
-    position: static;
-    transform: none;
-    margin: 10px auto;
-  }
-
-  .logo { height: 100px; }
 
   .main-nav li {
-    width: 80%;
+    width: 80%; 
     text-align: center;
-    margin-bottom: 5px;
   }
 
-  /* --- CORRECTIF D'ALIGNEMENT HISTOIRE SUR MOBILE --- */
+  /* 4. Les Sections Histoires */
   .timeline {
-    padding: 10px;
-  }
-
-  .event {
-    flex-direction: column; /* Empile verticalement */
-    align-items: flex-start; /* Aligne tout à gauche */
-    text-align: left; /* Force le texte à gauche */
-    border-left: none;
-    border-top: 5px solid #004C97;
-    padding: 25px 20px;
-    gap: 15px;
-  }
-
-  /* L'astuce pour passer l'image AU-DESSUS du texte */
-  .event img {
-    order: -1; /* L'image passe en premier */
-    width: 100%;
-    max-width: 100%;
-    height: 200px; /* Hauteur fixe pour que ce soit propre */
-    margin-bottom: 15px; /* Espace entre l'image et le titre */
-    object-fit: cover;
-  }
-  
-  /* Légendes */
-  .legends-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .legend-card {
-    width: 100%;
-    max-width: 400px;
-  }
-}
+    width: 1
