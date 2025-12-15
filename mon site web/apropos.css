@@ -1,0 +1,93 @@
+/* ==================== HERO SPÉCIFIQUE ==================== */
+.about-hero {
+  background: linear-gradient(to right, #004C97, #A50044);
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.about-hero h1 {
+  font-size: 3.5em;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: 0;
+  animation: fadeInDown 1s ease;
+}
+
+/* ==================== BLOC PRÉSENTATION ==================== */
+.presentation-section {
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.personal-card {
+  max-width: 800px;
+  background-color: #fff;
+  border-top: 5px solid #A50044;
+  border-bottom: 5px solid #004C97;
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  text-align: center;
+  margin-bottom: 50px;
+  transition: transform 0.3s ease;
+}
+
+.personal-card:hover {
+  transform: scale(1.02);
+}
+
+.personal-card h2 {
+  color: #004C97;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 2em;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+}
+
+/* STYLE MANUSCRIT */
+.handwritten-text {
+  font-family: 'Patrick Hand', cursive, sans-serif;
+  font-size: 1.4em;
+  line-height: 1.6;
+  color: #333;
+}
+
+.handwritten-text strong {
+  color: #A50044;
+}
+
+/* ==================== IMAGE DU BAS ==================== */
+.bottom-image-container {
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+}
+
+.bottom-image-container img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  filter: grayscale(20%);
+  transition: filter 0.5s ease;
+}
+
+.bottom-image-container img:hover {
+  filter: grayscale(0%);
+}
+
+.caption {
+  font-style: italic;
+  color: #666;
+  margin-top: 10px;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
